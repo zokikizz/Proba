@@ -26,22 +26,22 @@ namespace PaMolimte
 
             SetContentView(Resource.Layout.MapLayout);
 
-            
+            SetUpMap();
 
-            _mapf = FragmentManager.FindFragmentById(Resource.Id.mapa) as MapFragment;
+            //_mapf = FragmentManager.FindFragmentById(Resource.Id.mapa) as MapFragment;
 
-            if( _mapf == null)
-            {
-                GoogleMapOptions mapOptions = new GoogleMapOptions().InvokeMapType(GoogleMap.MapTypeNormal).InvokeZoomControlsEnabled(true).InvokeCompassEnabled(true);
+            //if( _mapf == null)
+            //{
+            //    GoogleMapOptions mapOptions = new GoogleMapOptions().InvokeMapType(GoogleMap.MapTypeNormal).InvokeZoomControlsEnabled(true).InvokeCompassEnabled(true);
 
-                FragmentTransaction frt = FragmentManager.BeginTransaction();
-                _mapf = MapFragment.NewInstance(mapOptions);
-                frt.Add(Resource.Id.mapa, _mapf, "mapa");
+            //    FragmentTransaction frt = FragmentManager.BeginTransaction();
+            //    _mapf = MapFragment.NewInstance(mapOptions);
+            //    frt.Add(Resource.Id.mapa, _mapf, "mapa");
 
-                frt.Commit();
-            }
+            //    frt.Commit();
+            //}
 
-            _mapf.GetMapAsync(this);
+            //_mapf.GetMapAsync(this);
 
         }
 
@@ -50,6 +50,13 @@ namespace PaMolimte
             gmap = googleMap;
         }
 
+        public void SetUpMap()
+        {
+            if( gmap == null)
+            {
+                FragmentManager.FindFragmentById<MapFragment>(Resource.Id.mapa).GetMapAsync(this); //GetMapAsync zove OnMapReady
+            }
+        }
       
     }
 }
