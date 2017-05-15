@@ -103,17 +103,12 @@ namespace PaMolimte
                 PolylineOptions po = new PolylineOptions();
                              //treba i < list.Count zasto puca sa tim?
               
-                for (int i = 0; i < list.Count - 1; i++)
+                for (int i = 0; i < list.Count; i++)
                 {
-                    LatLng src = list.GetRange(i, 1)[0];
-                    LatLng dest = list.GetRange(i + 1, 1)[0];
-
-
-                    po.Add(src, dest).InvokeWidth(10).InvokeColor(0x66FF0000);//red color
-
-                    gmap.AddPolyline(po);
-
+                    po.Add(list[i]).InvokeWidth(10).InvokeColor(0x66FF0000);//red color
                 }
+
+                gmap.AddPolyline(po);
             }
 
         }
@@ -208,6 +203,8 @@ namespace PaMolimte
 
             SetContentView(Resource.Layout.MapLayout);
 
+            
+
             SetUpMap();
 
 
@@ -219,6 +216,9 @@ namespace PaMolimte
              FindRouteAsync("Bulevar Nemanjica, Serbia, Nis, 6", "Kosovska, Srbia, Nis,  6");//Kosovska 6, Nis, "Jug Bogdanova, Srbia, Nis,  6"
 
             // FindOptimizaton("Bulevar Nemanjica, Serbia, Nis, 6", "Jug Bogdanova, Srbia, Nis,  6");//ne radi
+
+
+            SetContentView(Resource.Layout.LoginLayout);
 
         }
       

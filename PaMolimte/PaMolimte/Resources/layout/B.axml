@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:weightSum="100">
+    <EditText
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Emaltxt"
+        android:hint="email"
+        android:textColor="@android:color/holo_blue_light"
+        android:textColorHint="@android:color/holo_blue_light"
+        android:gravity="center" />
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/PasswordTextBox"
+        android:hint="password"
+        android:textColorHint="@android:color/holo_blue_light"
+        android:textColor="@android:color/holo_blue_light"
+        android:gravity="center" />
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button_boader_radius"
+        android:background="@drawable/Button_boader_radius"
+        android:gravity="center"
+        android:layout_weight="5"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
