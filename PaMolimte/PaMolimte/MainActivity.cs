@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace PaMolimte
 {
-    [Activity(Label = "Welcome to Core", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Welcome to Core", MainLauncher = true, Icon = "@drawable/icon", Theme ="@style/CoreTheme")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)

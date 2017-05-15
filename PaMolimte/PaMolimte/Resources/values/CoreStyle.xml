@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<resource>
+  <style name="CoreTheme" parent="Theme.AppCOmpat.Light.NoActionBar">
+    <item name="colorPrimary">#219653</item>
+    <item name="drawerAroowStyle">@style/CoreArrowStyle</item>
+  </style>
+
+  <style name="CoreArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+    <item name="color">#F5F5F5</item>
+    <itme name="spinBars">true</itme>
+  </style>
+</resource>
