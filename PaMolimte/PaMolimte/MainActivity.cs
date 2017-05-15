@@ -20,7 +20,7 @@ namespace PaMolimte
 
         public void OpenMap()
         {
-            StartActivity(typeof(MapActivity));
+            StartActivity(typeof(MapActivityV2));
         }
     }
 }
