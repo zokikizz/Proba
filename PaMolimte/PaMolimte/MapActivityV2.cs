@@ -17,7 +17,6 @@ using System.Net.Sockets;
 using System.Net.Http;
 using System.Net;
 
-
 namespace PaMolimte
 {
     [Activity(Label = "MapActivityV2")]
@@ -217,8 +216,6 @@ namespace PaMolimte
 
             // FindOptimizaton("Bulevar Nemanjica, Serbia, Nis, 6", "Jug Bogdanova, Srbia, Nis,  6");//ne radi
 
-
-            SetContentView(Resource.Layout.LoginLayout);
 
         }
       

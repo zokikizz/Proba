@@ -16,6 +16,12 @@ using Android.App;
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 
+//dodao sam za trazenje lokacije
+[assembly: UsesPermission(Android.Manifest.Permission.AccessFineLocation)]
+[assembly: UsesPermission(Android.Manifest.Permission.AccessCoarseLocation)]
+[assembly: UsesPermission(Android.Manifest.Permission.Internet)]
+
+
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version

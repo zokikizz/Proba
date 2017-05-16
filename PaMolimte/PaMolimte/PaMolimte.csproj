@@ -124,7 +124,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginActivity.cs" />
+    <Compile Include="FindDeviceActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MapActivity.cs" />
     <Compile Include="MapActivityV2.cs" />
@@ -143,9 +143,6 @@
     <AndroidResource Include="Resources\layout\LoginLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\Login.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -162,10 +159,14 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\CoreStyle.xml" />
+    <AndroidResource Include="Resources\drawable\Button_boader_radius.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Button_boader_radius.xml" />
+    <AndroidResource Include="Resources\values\style.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

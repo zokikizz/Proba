@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace PaMolimte
 {
-    [Activity(Label = "Welcome to Core", MainLauncher = true, Icon = "@drawable/icon", Theme ="@style/CoreTheme")]
+    [Activity(Label = "Welcome to Core", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/CoreTheme")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -12,15 +12,19 @@ namespace PaMolimte
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
-             SetContentView (Resource.Layout.Main);
+            //    SetContentView (Resource.Layout.LoginLayout);
+            StartActivity(typeof(FindDeviceActivity));
 
-            Button b = FindViewById<Button>(Resource.Id.btnOpenMap);
-            b.Click += delegate { OpenMap(); };
+         //   FindViewById<Button>(Resource.Id.Loginbtn).Click += delegate { Login(); };
         }
 
-        public void OpenMap()
+        public void Login()
         {
-            StartActivity(typeof(MapActivityV2));
+
+            if ((FindViewById<EditText>(Resource.Id.tbEmail).Text == "admin") && ( FindViewById<EditText>(Resource.Id.tbPassword).Text == "admin"))
+            {
+                StartActivity(typeof(MapActivityV2));
+            }
         }
     }
 }

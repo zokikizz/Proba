@@ -10,6 +10,6 @@
     />
 
   <solid android:color="#22aaff"/>
-  <strole android:with="1dp"
+  <strole android:width="1dp"
           android:color="#ddd"/>
 </shape>
